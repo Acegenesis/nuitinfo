@@ -1,6 +1,11 @@
+<script setup>
+const mode = ref(false)
+</script>
+
 <template>
-    <div>
-        <img src="/img/bg.png" alt="Vue.js logo" />
+    <div :class="mode ? 'dark' : 'light'">
+        <Switch @mode="mode = !mode" />
+        <img :src="mode ? '/img/bg_dark.png' : '/img/bg.png'" alt="Vue.js logo" />
         <slot></slot>
     </div>
 </template>

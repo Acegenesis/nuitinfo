@@ -90,6 +90,12 @@ body {
   box-shadow: 0 0 10px 10px rgba(237, 237, 237, 0.2);
 }
 
+.dark .logo {
+  background: #343434;
+  box-shadow: inset 0 0 0 10px #343434;
+  box-shadow: 0 0 10px 10px rgba(26, 181, 172, 0.2);
+}
+
 .logo img {
   height: 100%;
 }
@@ -108,7 +114,13 @@ body {
   letter-spacing: 0.1em;
   padding: 10px 15px;
   color: #1AB5AC;
+  background: #ececec;
   transition: all 0.2s ease-in-out;
+}
+
+.dark .playbtn {
+  background: #343434;
+  color: #fff;
 }
 
 .playbtn:hover {

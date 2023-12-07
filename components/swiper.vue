@@ -27,6 +27,10 @@
     border-radius: 20px;
 }
 
+.dark .card {
+    background-color: #343434;
+}
+
 .card .content {
     margin: 10px;
     display: flex;
@@ -86,6 +90,10 @@
     width: 50px;
     height: 50px;
     fill: white;
+}
+
+.dark .card .actions svg {
+    fill: #343434;
 }
 
 
