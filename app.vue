@@ -1,12 +1,17 @@
+<script setup>
+const play = ref(false)
+</script>
+
 <template>
     <NuxtLayout>
       <main>
-        <div class="logo">
+        <div v-if="!play" class="logo">
           <img src="/img/logo.png" alt="Vue.js logo"/>
         </div>
-        <button>
+        <button v-if="!play" @click="play = !play" class="playbtn">
           Jouer
         </button>
+        <Swiper v-if="play" />
       </main>
     </NuxtLayout>
 </template>
@@ -89,7 +94,7 @@ body {
   height: 100%;
 }
 
-button {
+.playbtn {
   width: 300px;
   display: flex;
   justify-content: center;
@@ -106,11 +111,21 @@ button {
   transition: all 0.2s ease-in-out;
 }
 
-button:hover {
+.playbtn:hover {
   transform: scale(1.05);
   background-color: #1AB5AC;
   color: #fff;
   cursor: pointer;
+}
+
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.4s;
+}
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+  filter: blur(1rem);
 }
 
 </style>
