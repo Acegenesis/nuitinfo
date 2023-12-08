@@ -1,3 +1,4 @@
+import { Counter } from '../.nuxt/components';
 <script setup>
 const mode = ref(false)
 </script>
@@ -5,6 +6,7 @@ const mode = ref(false)
 <template>
     <div :class="mode ? 'dark' : 'light'">
         <Switch @mode="mode = !mode" />
+        <Counter :initialCount="0" />
         <img :src="mode ? '/img/bg_dark.png' : '/img/bg.png'" alt="Vue.js logo" />
         <slot></slot>
     </div>

@@ -144,5 +144,9 @@ const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
     transition: all 0.5s ease-in-out;
 }
 
+.dark .response {
+    color: #fff;
+}
+
 
 </style>
